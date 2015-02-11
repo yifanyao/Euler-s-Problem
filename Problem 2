@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void main(){
+    int x1=1;
+    int x2=2;
+    int sum=0;
+    
+    while (x2<4000000) {
+        x1=x1+x2;
+        x2=x1+x2;
+        
+        if (x1%2==0) {
+            sum+=x1;
+        }
+        
+        if (x2%2==0) {
+            sum+=x2;
+        }
+    }
+    
+    
+    printf("%i\n",sum+2);
+}
