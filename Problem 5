@@ -1,0 +1,30 @@
+
+public class Problem5 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			long answer=2;
+			answer=answer*20;//dont have to check 4 5  10 1 20 
+			answer*=19;// dont have to check 19
+			answer*=18;// dont have to check 3, 6, 18  ,9 
+			
+			// dont have to check 3*5=15, 4*4=16, 2*6=12, 2*4=8
+			
+			
+			answer*=17;// dont have to check 17
+			answer*=13;
+			answer*=7;
+			// dont have to check 2*7=14
+			answer*=11;
+			
+			System.out.print(answer);
+			
+			
+			
+			
+	}
+
+}
