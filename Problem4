@@ -1,0 +1,37 @@
+
+public class Problem4 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int maxPalin = -1;
+		for (int i = 100; i < 1000; i++) {
+			for (int j = 100; j < 1000; j++) {
+				int prod = i * j;
+				if (Palin(prod) && prod > maxPalin)
+					maxPalin = prod;
+			}
+		}
+		System.out.print(maxPalin);
+	}
+	
+	public static boolean Palin(int n){
+		// we know its six digit number
+		int digit1=n/100000;
+		int digit2=(n-digit1*100000)/10000;
+		int digit3=(n-digit1*100000-digit2*10000)/1000;
+		int digit4=(n-digit1*100000-digit2*10000-digit3*1000)/100;
+		int digit5=(n-digit1*100000-digit2*10000-digit3*1000-digit4*100)/10;
+		int digit6=n%10;
+		
+		if((digit1==digit6)&&(digit2==digit5)&&(digit3==digit4))
+			return true;
+		else
+			return false;
+		
+	}
+
+}
